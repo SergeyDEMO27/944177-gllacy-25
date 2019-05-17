@@ -9,15 +9,46 @@
   <nav class="main-nav">
     <a href="index.html" class="main-header-logo"><img src="img/Logo.svg" width="154" height="64" alt="Логотип GllacyShop"></a>
     <ul class="main-nav-list">
-      <li><a href="#">Каталог</a></li>
+      <li><button type="button">Каталог</button></li>
       <li><a href="#">Доставка и оплата</a></li>
       <li><a href="#">О Компании</a></li>
     </ul>
   </nav>
   <div class="user-nav">
-  <div class="user-search"><a class="search-form"></a></div>
-  <div class="user-login"><a href="#">Вход</a></div>
-  <div class="user-bin"><a href="#" class="bin empty-bin">Пусто</a></div>
+  <div class="user-search">
+    <button type="button" class="open-search popup-open" aria-label="Кнопка поиска"></button>
+  </div>
+  <div class="user-login">
+    <button type="button" class="open-login popup-open">Вход</button>
+  </div>
+  <div class="user-basket">
+    <button type="button" class="basket empty-basket">2 товара</button>
+    <div class="basket-popup visually-hidden">
+      <h2 class="visually-hidden">Содержимое корзины</h2>
+      <ul class="basket-list">
+        <li>
+          <button type="button" aria-label="Кнопка удаления из корзины"></button>
+          <h3>Пломбир с апельсиновым джемом</h3>
+          <p class="catalog-item-img">
+            <img src="img/Item1.jpg" width="33" height="33" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой">
+            </p>
+            <p class="item-price-calculation">1,5 кг x 200 руб.</p>
+            <p class="total-item-price">300 руб.</p>
+          </li>
+        <li>
+          <button type="button" aria-label="Кнопка удаления из корзины"></button>
+          <h3>Клубничный пломбир с присыпкой из белого шоколада</h3>
+          <p class="catalog-item-img">
+            <img src="img/Item3.jpg" width="33" height="33" alt="Сливочно-клубничное мороженое с присыпкой из белого шоколада">
+            </p>
+            <p class="item-price-calculation">1,5 кг x 300 руб.</p>
+            <p class="total-item-price">450 руб.</p>
+        </li>
+      </ul>
+      <p class="total-price">Итого: 750 руб.</p>
+      <a href="#" class="button>">Оформить заказ</a>
+  </div>
+</div>
 </div>
   <p class="header-contacts">
     С 10 до 20, ежедневно <span class="header-contact">8 812 450-25-25</span>
