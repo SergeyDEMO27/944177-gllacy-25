@@ -9,8 +9,9 @@
   <nav class="main-nav">
     <a class="main-header-logo"><img src="img/Logo.svg"  width="154" height="64" alt="Логотип GllacyShop"></a>
     <ul class="main-nav-list">
-      <li><button type="button">Каталог</button>
-        <ul class="catalog-list visually-hidden">
+      <li>
+        <a href="#">Каталог</a>
+        <ul class="catalog-list">
           <li><a href="#">Новинки</a></li>
           <li><a href="#">Сливочное</a></li>
           <li><a href="#">Щербеты</a></li>
@@ -24,17 +25,17 @@
   </nav>
   <div class="user-nav">
   <div class="user-search">
-    <button type="button" class="open-search popup-open" aria-label="Кнопка поиска"></button>
-  <div class="search-popup visually-hidden">
+    <a href="#" class="open-search" aria-label="Кнопка поиска"></a>
+  <div class="search-popup">
   <form action="https://echo.htmlacademy.ru" method="get">
     <input type="search" name="user-search" placeholder="Что ищем?" autocomplete="on" aria-label="Поле поиска">
-    <button type="submit" tabindex="-1" class="visually-hidden"></button>
+    <button type="submit" tabindex="-1" class="display-none"></button>
   </form>
 </div>
   </div>
   <div class="user-login">
-    <button type="button" class="open-login popup-open">Вход</button>
-    <div class="login-popup visually-hidden">
+    <a href="#" class="open-login">Вход</a>
+    <div class="login-popup">
     <form action="https://echo.htmlacademy.ru" method="post">
       <input type="email" name="user-login" placeholder="Электронная почта" autocomplete="on" aria-label="Поле ввода логина в форме электронной почты" required>
       <input type="password" name="user-password" placeholder="Пароль" autocomplete="off" aria-label="Поле ввода пароля" required>
@@ -45,7 +46,7 @@
   </div>
   </div>
   <div class="user-basket">
-    <button type="button" class="basket empty-basket">Пусто</button>
+    <a href="#" class="basket empty-basket">Пусто</a>
   </div>
 </div>
   <p class="header-contacts">
@@ -163,17 +164,7 @@
     <span class="main-contact">8 812 450-25-25</span><br>
     (с 10 до 20 ежедневно)
   </p>
-  <button type="button" class="button">Форма обратной связи</button>
-  <div class="feedback-popup visually-hidden">
-  <p>Мы обязательно вам ответим!</p>
-  <form action="https://echo.htmlacademy.ru" method="post">
-    <input type="text" name="user-name" placeholder="Как вас зовут?" aria-label="Поле ввода вашего имени" autocomplete="on">
-    <input type="email" name="user-email" placeholder="Ваша почта для ответа?" aria-label="Поле ввода вашей электронной почты" autocomplete="on" required>
-    <textarea name="user-comments" rows="8" cols="40" placeholder="Напишите что-нибудь..." aria-label="Поле ввода возникших вопросов" required></textarea>
-    <button type="submit" class="button">Отправить</button>
-  </form>
-  <button type="button" class="close-feedback-form" aria-label="Кнопка закрытия формы обратной связи"></button>
-</div>
+  <a href="#" class="feedback-open">Форма обратной связи</a>
 </section>
 </main>
 <footer class="main-footer">
@@ -193,6 +184,16 @@
     <a href="https://htmlacademy.ru" class="btn">HTML Academy</a>
     <p>Сделано в HTML Academy © 2019</p>
   </div>
+  <div class="feedback-popup">
+  <p>Мы обязательно вам ответим!</p>
+  <form action="https://echo.htmlacademy.ru" method="post">
+    <input type="text" name="user-name" placeholder="Как вас зовут?" aria-label="Поле ввода вашего имени" autocomplete="on">
+    <input type="email" name="user-email" placeholder="Ваша почта для ответа?" aria-label="Поле ввода вашей электронной почты" autocomplete="on" required>
+    <textarea name="user-comments" rows="8" cols="40" placeholder="Напишите что-нибудь..." aria-label="Поле ввода возникших вопросов" required></textarea>
+    <button type="submit" class="button">Отправить</button>
+  </form>
+  <button type="button" class="close-feedback-form" aria-label="Кнопка закрытия формы обратной связи"></button>
+</div>
 </footer>
   </body>
 </html>

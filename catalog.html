@@ -9,21 +9,45 @@
   <nav class="main-nav">
     <a href="index.html" class="main-header-logo"><img src="img/Logo.svg" width="154" height="64" alt="Логотип GllacyShop"></a>
     <ul class="main-nav-list">
-      <li><button type="button">Каталог</button></li>
+      <li>
+        <a href="#">Каталог</a>
+        <ul class="catalog-list">
+          <li><a href="#">Новинки</a></li>
+          <li><a>Сливочное</a></li>
+          <li><a href="#">Щербеты</a></li>
+          <li><a href="#">Фруктовый лед</a></li>
+          <li><a href="#">Мелорин</a></li>
+        </ul>
+      </li>
       <li><a href="#">Доставка и оплата</a></li>
       <li><a href="#">О Компании</a></li>
     </ul>
   </nav>
   <div class="user-nav">
-  <div class="user-search">
-    <button type="button" class="open-search popup-open" aria-label="Кнопка поиска"></button>
+    <div class="user-search">
+      <a href="#" class="open-search" aria-label="Кнопка поиска"></a>
+    <div class="search-popup">
+    <form action="https://echo.htmlacademy.ru" method="get">
+      <input type="search" name="user-search" placeholder="Что ищем?" autocomplete="on" aria-label="Поле поиска">
+      <button type="submit" tabindex="-1" class="display-none"></button>
+    </form>
   </div>
-  <div class="user-login">
-    <button type="button" class="open-login popup-open">Вход</button>
-  </div>
+    </div>
+    <div class="user-login">
+      <a href="#" class="open-login">Вход</a>
+      <div class="login-popup">
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <input type="email" name="user-login" placeholder="Электронная почта" autocomplete="on" aria-label="Поле ввода логина в форме электронной почты" required>
+        <input type="password" name="user-password" placeholder="Пароль" autocomplete="off" aria-label="Поле ввода пароля" required>
+        <a href="#" class="restore">Забыли пароль?</a>
+        <a href="#" class="registration">Новая регистрация</a>
+        <button type="submit" class="button">Отправить</button>
+      </form>
+    </div>
+    </div>
   <div class="user-basket">
-    <button type="button" class="basket empty-basket">2 товара</button>
-    <div class="basket-popup visually-hidden">
+    <a href="#" class="basket empty-basket">2 товара</a>
+    <div class="basket-popup">
       <h2 class="visually-hidden">Содержимое корзины</h2>
       <ul class="basket-list">
         <li>
