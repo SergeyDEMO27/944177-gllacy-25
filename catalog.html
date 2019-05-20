@@ -86,7 +86,39 @@
     <li class="breadcrumbs-current">Сливочное</li>
     </ul>
     <section class="catalog">
-      <!--Здесь будет форма-->
+      <div class="filter-form">
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <label>Сортировка:
+          <select name="sort">
+            <option value="popularity">по популярности</option>
+          </select>
+        </label>
+          <label>Цена: 100 руб. - 500 руб.
+            <input type="range" name="price-range" min="0" max="800" step="100" value="100">
+            <!-- <span>второй ползунок</span> -->
+          </label>
+        <fieldset>
+          <legend>Жирность:</legend>
+          <ul>
+            <li><label><input type="radio" name="fat" value="0">0%</label></li>
+            <li><label><input type="radio" name="fat" value="<10" checked>до 10%</label></li>
+            <li><label><input type="radio" name="fat" value="<30">до 30%</label></li>
+            <li><label><input type="radio" name="fat" value=">30">выше 30%</label></li>
+          </ul>
+          </fieldset>
+          <fieldset>
+          <legend>Наполнители:</legend>
+          <ul>
+            <li><label><input type="checkbox" name="chok-fill" checked>шоколадные</label></li>
+            <li><label><input type="checkbox" name="sugar-fill" checked>сахарные присыпки</label></li>
+            <li><label><input type="checkbox" name="fruit-fill">фрукты</label></li>
+            <li><label><input type="checkbox" name="syrup-fill">сиропы</label></li>
+            <li><label><input type="checkbox" name="jam-fill">джемы</label></li>
+          </ul>
+          </fieldset>
+          <button type="submit" class="btnn">Применить</button>
+      </form>
+    </div>
       <h2 class="visually-hidden">Список сливочного мороженого</h2>
       <ul class="catalog-list">
         <li class="catalog-item">
