@@ -93,11 +93,8 @@
             <option value="popularity">по популярности</option>
           </select>
         </label>
-          <label>Цена: 100 руб. - 500 руб.
-            <input type="range" name="price-range" min="0" max="800" step="100" value="100">
-            <!-- <span>второй ползунок</span> -->
-          </label>
-        <fieldset>
+        <span>Цена</span>
+        <fieldset class="filter-fat">
           <legend>Жирность:</legend>
           <ul>
             <li><label><input type="radio" name="fat" value="0">0%</label></li>
@@ -106,7 +103,7 @@
             <li><label><input type="radio" name="fat" value=">30">выше 30%</label></li>
           </ul>
           </fieldset>
-          <fieldset>
+          <fieldset class="filter-fill">
           <legend>Наполнители:</legend>
           <ul>
             <li><label><input type="checkbox" name="chok-fill" checked>шоколадные</label></li>
