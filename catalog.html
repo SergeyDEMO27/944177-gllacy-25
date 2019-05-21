@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 <header class="main-header">
@@ -10,7 +13,7 @@
     <a href="index.html" class="main-header-logo"><img src="img/Logo.svg" width="154" height="64" alt="Логотип GllacyShop"></a>
     <ul class="main-nav-list">
       <li>
-        <a href="#">Каталог</a>
+        <a href="#" class="button">Каталог</a>
         <ul class="catalog-list">
           <li><a href="#">Новинки</a></li>
           <li><a>Сливочное</a></li>
@@ -47,7 +50,7 @@
     </div>
   <div class="user-basket">
     <a href="#" class="basket empty-basket">2 товара</a>
-    <div class="basket-popup">
+    <div class="modal basket-popup">
       <h2 class="visually-hidden">Содержимое корзины</h2>
       <ul class="basket-list">
         <li>

@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 <header class="main-header">
@@ -26,7 +29,7 @@
   <div class="user-nav">
   <div class="user-search">
     <a href="#" class="open-search" aria-label="Кнопка поиска"></a>
-  <div class="search-popup">
+  <div class="modal search-popup">
   <form action="https://echo.htmlacademy.ru" method="get">
     <input type="search" name="user-search" placeholder="Что ищем?" autocomplete="on" aria-label="Поле поиска">
     <button type="submit" tabindex="-1" class="display-none"></button>
@@ -35,7 +38,7 @@
   </div>
   <div class="user-login">
     <a href="#" class="open-login">Вход</a>
-    <div class="login-popup">
+    <div class="modal login-popup">
     <form action="https://echo.htmlacademy.ru" method="post">
       <input type="email" name="user-login" placeholder="Электронная почта" autocomplete="on" aria-label="Поле ввода логина в форме электронной почты" required>
       <input type="password" name="user-password" placeholder="Пароль" autocomplete="off" aria-label="Поле ввода пароля" required>
@@ -139,7 +142,7 @@
   </section>
   <article class="blog-new">
     <h3>Новое в нашем блоге</h3>
-    <a href="#" class="more-blog-new">10 способов сервировки фруктовых щербетов к столу</a>
+    <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
   </article>
 <aside class="mailing">
   <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ерунды. Честно =)</p>
@@ -184,7 +187,7 @@
     <a href="https://htmlacademy.ru" class="btn">HTML Academy</a>
     <p>Сделано в HTML Academy © 2019</p>
   </div>
-  <div class="feedback-popup">
+  <div class="modal feedback-popup">
   <p>Мы обязательно вам ответим!</p>
   <form action="https://echo.htmlacademy.ru" method="post">
     <input type="text" name="user-name" placeholder="Как вас зовут?" aria-label="Поле ввода вашего имени" autocomplete="on">
