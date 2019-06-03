@@ -16,15 +16,27 @@ body {
   text-align: center;
   color: #ffffff;
   vertical-align: middle;
-  background-color: #ed5a3d;
+  background-color: rgb(237,90,61);
   border: none;
   border-radius: 25px;
   text-decoration: none;
   font-weight: 700;
   background-image: -moz-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  /* background-image: -webkit-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%); */
   background-image: -ms-linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
+  box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.5);
+}
+
+.button:hover {
+  background-color: rgb(237,90,61, 0.8);
+}
+
+.button:active {
+  background-color: rgb(237,90,61);
+  background-image: -moz-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1);
 }
 
 .main-nav-list {
@@ -32,11 +44,6 @@ body {
   padding: 0;
   margin: 0;
   list-style: none;
-}
-
-.page-current {
-  background-color: #d07058;
-  border-radius: 20px;
 }
 
 .nav-item > a:hover,
@@ -48,12 +55,20 @@ body {
   text-decoration: none;
 }
 
-.nav-item a {
+.nav-item > .page-current {
+  background-color: rgb(208, 112, 88);
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.nav-item > a {
   position: relative;
+  background: none;
+  padding: 7px 14px;
 }
 
 .nav-item:hover > a  {
-  border-radius: 20px;
+  border-radius: 15px;
   background-color: rgb(247, 246, 243);
   font-size: 16px;
   line-height: 18px;
@@ -70,7 +85,7 @@ body {
 
 .nav-item > a:active {
   background-color: rgba(248, 247, 244, 0.988);
-  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 1);
 }
 
 .main-nav-list a {
@@ -85,7 +100,7 @@ body {
   display: none;
   position: absolute;
   left: -20px;
-  top: 25px;
+  top: 29px;
   width: 144px;
   padding: 0;
   margin: 0;
@@ -538,7 +553,7 @@ input[type="text"]:hover {
 	overflow: hidden;
 }
 
-.current-page>a {
+.current-page > a {
   font: inherit;
   font-size: 16px;
   line-height: 18px;
@@ -752,6 +767,10 @@ input[type="text"]:hover {
   width: 675px;
 }
 
+.main-nav-list > li:first-child {
+  margin-right: 14px;
+}
+
 .main-nav-list > li {
   margin-right: 28px;
 }
@@ -942,7 +961,7 @@ input[type="text"]:hover {
 .footer-social svg {
   width: 32px;
   height: 32px;
-  border: 2px solid #c2cec7;
+  border: 2px solid rgb(194,206,202, 0.6);
   border-radius: 50%;
 }
 
@@ -954,6 +973,19 @@ input[type="text"]:hover {
 .footer-social li:hover path,
 .footer-social li:hover rect {
   fill: #ffffff;
+}
+
+.footer-social li:hover svg {
+  border-color: rgb(194,206,202, 1)
+}
+
+.footer-social li:active path,
+.footer-social li:active rect {
+  fill: #e6ebe9;
+}
+
+.footer-social li:active svg {
+  border-color: rgb(194,206,202, 0.8);
 }
 
 .provider-info {
@@ -1012,6 +1044,40 @@ input[type="text"]:hover {
   margin-left: auto;
 }
 
+.page-catalog-list li:hover .quick-view {
+  display: block;
+}
+
+.quick-view {
+  display: none;
+  position: absolute;
+  width: 293px;
+  height: 405px;
+  top: 10px;
+  left: -13px;
+  z-index: 2;
+  border-radius: 5px;
+  background-color: rgb(248, 247, 244, 0.2);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.quick-view a {
+  position: absolute;
+  bottom: 20px;
+  left: 50px;
+  display: block;
+  width: 200px;
+  height: 34px;
+  padding-top: 10px;
+  text-align: center;
+  margin-top: auto;
+  z-index: 2;
+}
+
+.catalog-item-img {
+  margin-bottom: 0;
+}
+
 .catalog-item-img img {
   width: 267px;
   height: 267px;
@@ -1019,6 +1085,7 @@ input[type="text"]:hover {
 }
 
 .page-catalog-list {
+  position: relative;
   display: flex;
   width: 1150px;
   padding-left: 25px;
@@ -1038,9 +1105,15 @@ input[type="text"]:hover {
   margin-top: 0;
   text-align: center;
   order: 1;
+  font-size: 16px;
+  text-height: 22px;
+  font-weight: 400px;
 }
 
 .catalog-item-price {
   position: absolute;
-  bottom: 60px;
+  bottom: 35px;
+  font-size: 45px;
+  text-height: 45px;
+  font-weight: 700px;
 }
