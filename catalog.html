@@ -104,21 +104,21 @@
 </div>
 </div>
   <p class="header-contacts">
-    С 10 до 20, ежедневно <br>
-    <span class="header-contact">8 812 450-25-25</span>
+  С 10 до 20, ежедневно<br>
+  <span class="header-contact">8 812 450-25-25</span>
   </p>
 </header>
 <main class="container">
-  <h1 class="creamy-title">Сливочное мороженое</h1>
   <ul class="breadcrumbs">
     <li><a href="index.html">Главная</a></li>
     <li><a href="">Каталог</a></li>
     <li class="breadcrumbs-current">Сливочное</li>
     </ul>
+  <h1 class="creamy-title">Сливочное мороженое</h1>
     <section class="catalog">
       <div class="filter-form">
       <form action="https://echo.htmlacademy.ru" method="post">
-        <label>Сортировка:
+        <label><span class="filter-name">Сортировка:</span>
           <select name="sort">
             <option value="popularity" selected>по популярности</option>
             <option value="low-price">сначала недорогие</option>
@@ -126,27 +126,36 @@
             <option value="fatness">по жирности</option>
           </select>
         </label>
-        <span>Цена</span>
+        <div class="filter-range">
+          <div class="filter-range-title">Цена: 100 руб. – 500 руб.</div>
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+              <div class="range-toggle range-toggle-min"></div>
+              <div class="range-toggle range-toggle-max"></div>
+            </div>
+          </div>
+        </div>
         <fieldset class="filter-fat">
-          <legend>Жирность:</legend>
-          <ul>
-            <li><label><input type="radio" name="fat" value="0">0%</label></li>
-            <li><label><input type="radio" name="fat" value="<10" checked>до 10%</label></li>
-            <li><label><input type="radio" name="fat" value="<30">до 30%</label></li>
-            <li><label><input type="radio" name="fat" value=">30">выше 30%</label></li>
+          <legend><span class="filter-name">Жирность:</span></legend>
+          <ul class="fat-list">
+            <li><input type="radio"  id="fat0" class="visually-hidden" name="fat" value="0"><label for="fat0">0%</label></li>
+            <li><input type="radio"  id="fat10" class="visually-hidden" name="fat" value="<10" checked><label for="fat10">до 10%</label></li>
+            <li><input type="radio"  id="fat30" class="visually-hidden" name="fat" value="<30"><label for="fat30">до 30%</label></li>
+            <li><input type="radio"  id="fat100" class="visually-hidden" name="fat" value=">30"><label for="fat100">выше 30%</label></li>
           </ul>
           </fieldset>
           <fieldset class="filter-fill">
-          <legend>Наполнители:</legend>
-          <ul>
-            <li><label><input type="checkbox" name="chok-fill" checked>шоколадные</label></li>
-            <li><label><input type="checkbox" name="sugar-fill" checked>сахарные присыпки</label></li>
-            <li><label><input type="checkbox" name="fruit-fill">фрукты</label></li>
-            <li><label><input type="checkbox" name="syrup-fill">сиропы</label></li>
-            <li><label><input type="checkbox" name="jam-fill">джемы</label></li>
+          <legend><span class="filter-name">Наполнители:</span></legend>
+          <ul class="fill-list">
+            <li><input type="checkbox" id="choc" class="visually-hidden" name="chok-fill" checked><label for="choc">шоколадные</label></li>
+            <li><input type="checkbox" id="sugar" class="visually-hidden" name="sugar-fill" checked><label for="sugar">сахарные присыпки</label></li>
+            <li><input type="checkbox" id="fruit" class="visually-hidden" name="fruit-fill"><label for="fruit">фрукты</label></li>
+            <li><input type="checkbox" id="syrop" class="visually-hidden" name="syrup-fill"><label for="syrop">сиропы</label></li>
+            <li><input type="checkbox" id="jam" class="visually-hidden" name="jam-fill"><label for="jam">джемы</label></li>
           </ul>
           </fieldset>
-          <button type="submit" class="btnn">Применить</button>
+          <button type="submit">Применить</button>
       </form>
     </div>
       <h2 class="visually-hidden">Список сливочного мороженого</h2>
@@ -273,12 +282,29 @@
         </li>
         </ul>
         <ul class="pagination-list">
-          <li class="page current-page1"><a>1</a></li>
+          <li class="page"><a href="#" class="prev">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="8px" height="12px" viewBox="0 0 8 12" enable-background="new 0 0 8 12" xml:space="preserve">
+<path fill="#f8f9f8" d="M7.237,5.642L1.729,0.133c-0.198-0.198-0.519-0.198-0.716,0s-0.198,0.519,0,0.716L6.163,6l-5.151,5.15
+	c-0.198,0.198-0.198,0.519,0,0.717c0.099,0.099,0.229,0.148,0.358,0.148c0.129,0,0.259-0.05,0.358-0.148l5.509-5.509
+	C7.436,6.16,7.436,5.84,7.237,5.642z"/>
+</svg>
+  <span class="visually-hidden">Назад</span>
+          </a></li>
+          <li class="page"><a class="current-page1">1</a></li>
           <li class="page"><a href="#">2</a></li>
           <li class="page"><a href="#">3</a></li>
           <li class="page"><a href="#">4</a></li>
           <li class="page"><a href="#">5</a></li>
-          <li class="page"><a href="#"><span class="next-page"></span></a></li>
+          <li class="page"><a href="#" class="next">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="8px" height="12px" viewBox="0 0 8 12" enable-background="new 0 0 8 12" xml:space="preserve">
+<path fill="#f8f9f8" d="M7.237,5.642L1.729,0.133c-0.198-0.198-0.519-0.198-0.716,0s-0.198,0.519,0,0.716L6.163,6l-5.151,5.15
+	c-0.198,0.198-0.198,0.519,0,0.717c0.099,0.099,0.229,0.148,0.358,0.148c0.129,0,0.259-0.05,0.358-0.148l5.509-5.509
+	C7.436,6.16,7.436,5.84,7.237,5.642z"/>
+</svg>
+  <span class="visually-hidden">Вперёд</span>
+            </a></li>
         </ul>
       </section>
   </main>

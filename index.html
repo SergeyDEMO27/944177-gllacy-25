@@ -83,25 +83,34 @@
     С 10 до 20, ежедневно<br>
     <span class="header-contact">8 812 450-25-25</span>
   </p>
-</div>
 </header>
 <main>
-  <section class="main-slider container">
+<section class="main-slider container">
+  <input class="visually-hidden" type="radio" id="product-1" name="toggle" checked>
+  <input class="visually-hidden" type="radio" id="product-2" name="toggle">
+  <input class="visually-hidden" type="radio" id="product-3" name="toggle">
+<div class="slider-controls">
+  <label for="product-1">Первый</label>
+  <label for="product-2">Второй</label>
+  <label for="product-3">Третий</label>
+</div>
   <ul class="main-slider-list">
-    <li class="inline">
-    <h3 class="slide-title">Крем-брюле и пломбир с малиновым джемом</h3>
-    <p class="slider-img"><img src="img/Slider_icecream1.png" alt="Крем-брюле и пломбир с малиновым джемом"></p>
+    <li class="slider-item slide" id="slide1">
+      <h3 class="slide-title">Крем-брюле и пломбир с малиновым джемом</h3>
+      <p class="slider-img"><img src="img/Slider_icecream1.png" alt="Крем-брюле и пломбир с малиновым джемом"></p>
+      <a href="#" class="button1">Давайте оба!</a>
     </li>
-    <li class="inactive-slide">
+    <li class="slider-item slide" id="slide2">
       <h3 class="slide-title">Шоколадный пломбир и лимонный сорбет</h3>
       <p class="slider-img"><img src="img/Slider_icecream2.png" alt="Шоколадный пломбир и лимонный сорбет"></p>
+      <a href="#" class="button1">Давайте оба!</a>
     </li>
-    <li class="inactive-slide">
+    <li class="slider-item slide" id="slide3">
       <h3 class="slide-title">Пломбир с помадкой и клубничный щербет</h3>
       <p class="slider-img"><img src="img/Slider_icecream3.png" alt="Пломбир с помадкой и клубничный щербет"></p>
+      <a href="#" class="button1">Давайте оба!</a>
     </li>
   </ul>
-  <a href="#" class="button1">Давайте оба!</a>
 </section>
   <section class="special-offers container">
   <h2 class="visually-hidden">Специальные предложения</h2>
@@ -109,12 +118,12 @@
     <li>
       <h3 class="offer-title">Малинка даром!</h3>
       <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-      <a href="#" class="button">Хочу варенье!</a>
+      <a href="#" class="offer-btn1 button">Хочу варенье!</a>
     </li>
     <li>
       <h3 class="offer-title">Шоколадки даром!</h3>
       <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-      <a href="#" class="button">Хочу шоколадки!</a>
+      <a href="#" class="offer-btn2 button">Хочу шоколадки!</a>
     </li>
   </ul>
 </section>
@@ -122,39 +131,39 @@
   <h2 class="visually-hidden">Хиты продаж</h2>
   <ul class="hit-offer-list">
     <li>
-      <h3 class="hit-title">
-        <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-      </h3>
       <p class="frontpage-item-img">
         <img src="img/Item1.jpg" alt="Сливочное мороженое с апельсиновым джемом и цитрусовой стружкой">
         </p>
-        <p class="frontpage-item-price">310₽<span class="price">₽/кг</span></p>
+      <h3 class="hit-title">
+        <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+      </h3>
+        <p class="frontpage-item-price">310₽<span class="price">/кг</span></p>
     </li>
     <li>
-      <h3 class="hit-title">
-        <a href="#">Сливочно-кофейное с кусочками шоколада</a>
-      </h3>
       <p class="frontpage-item-img">
         <img src="img/Item2.jpg" alt="Сливочно-кофейное мороженое с кусочками шоколада">
         </p>
+      <h3 class="hit-title">
+        <a href="#">Сливочно-кофейное с кусочками шоколада</a>
+      </h3>
         <p class="frontpage-item-price">380₽<span class="price">/кг</span></p>
     </li>
     <li>
-      <h3 class="hit-title">
-        <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
-      </h3>
       <p class="frontpage-item-img">
         <img src="img/Item3.jpg" alt="Сливочно-клубничное мороженое с присыпкой из белого шоколада">
         </p>
+      <h3 class="hit-title">
+        <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
+      </h3>
         <p class="frontpage-item-price">355₽<span class="price">/кг</span></p>
     </li>
     <li>
-      <h3 class="hit-title">
-        <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
-      </h3>
       <p class="frontpage-item-img">
         <img src="img/Item4.jpg" alt="Сливочное крем-брюле мороженое с карамельной подливкой">
         </p>
+      <h3 class="hit-title">
+        <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
+      </h3>
         <p class="frontpage-item-price">415₽<span class="price">/кг</span></p>
     </li>
   </ul>
