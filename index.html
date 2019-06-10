@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="index-page back-color1 backlight1 container-main">
 <header class="main-header container">
   <div class="header-nav">
   <nav class="main-nav">
@@ -38,7 +38,7 @@
 </g>
 </svg>
     <a href="#" class="open-search" aria-label="Кнопка поиска"></a>
-  <div class="modal search-popup">
+  <div class=" search-popup">
   <form action="https://echo.htmlacademy.ru" method="get">
     <input type="search" name="user-search" placeholder="Что ищем?" autocomplete="on" aria-label="Поле поиска">
     <button type="submit" tabindex="-1" class="display-none"></button>
@@ -95,7 +95,7 @@
   <label for="product-3">Третий</label>
 </div>
   <ul class="main-slider-list">
-    <li class="slider-item slide" id="slide1">
+    <li class="slider-item slide show-slide" id="slide1">
       <h3 class="slide-title">Крем-брюле и пломбир с малиновым джемом</h3>
       <p class="slider-img"><img src="img/Slider_icecream1.png" alt="Крем-брюле и пломбир с малиновым джемом"></p>
       <a href="#" class="button1">Давайте оба!</a>
@@ -137,7 +137,8 @@
       <h3 class="hit-title">
         <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
       </h3>
-        <p class="frontpage-item-price">310₽<span class="price">/кг</span></p>
+        <p class="frontpage-item-price">310<span class="сurrency">₽</span><span class="price">/кг</span></p>
+        <div class="quick-view"><a class="button" href="#">Быстрый просмотр</a></div>
     </li>
     <li>
       <p class="frontpage-item-img">
@@ -146,7 +147,8 @@
       <h3 class="hit-title">
         <a href="#">Сливочно-кофейное с кусочками шоколада</a>
       </h3>
-        <p class="frontpage-item-price">380₽<span class="price">/кг</span></p>
+        <p class="frontpage-item-price">380<span class="сurrency">₽</span><span class="price">/кг</span></p>
+        <div class="quick-view"><a class="button" href="#">Быстрый просмотр</a></div>
     </li>
     <li>
       <p class="frontpage-item-img">
@@ -155,7 +157,8 @@
       <h3 class="hit-title">
         <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
       </h3>
-        <p class="frontpage-item-price">355₽<span class="price">/кг</span></p>
+        <p class="frontpage-item-price">355<span class="сurrency">₽</span></span><span class="price">/кг</span></p>
+        <div class="quick-view"><a class="button" href="#">Быстрый просмотр</a></div>
     </li>
     <li>
       <p class="frontpage-item-img">
@@ -164,12 +167,13 @@
       <h3 class="hit-title">
         <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
       </h3>
-        <p class="frontpage-item-price">415₽<span class="price">/кг</span></p>
+        <p class="frontpage-item-price">415<span class="сurrency">₽</span><span class="price">/кг</span></p>
+        <div class="quick-view"><a class="button" href="#">Быстрый просмотр</a></div>
     </li>
   </ul>
 </section>
   <section class="features container">
-    <h1 class="main-title">Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h1>
+    <h1 class="main-title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h1>
     <h2 class="visually-hidden">Преимущества</h2>
     <ul class="feature-list">
       <li>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
@@ -202,10 +206,10 @@
   </p>
   <p>
     Для заказов по телефону:<br>
-    <span class="main-contact">8 812 450-25-25</span><br>
+    <span class="main-number">8 812 450-25-25</span><br>
     (с 10 до 20 ежедневно)
   </p>
-  <a href="#" class="feedback-open button">Форма обратной связи</a>
+  <button type="button" class="feedback-open button">Форма обратной связи</a>
 </div>
 </section>
 </main>
@@ -289,7 +293,7 @@
   </ul>
   <div class="footer-copyright">
     <a href="https://htmlacademy.ru"><img src="img/logo-htmlacademy-small.svg" alt="HTML Academy"></a>
-    <p>Сделано в HTML Academy © 2019</p>
+    <p>Сделано в <span class="underline">HTML Academy</span> © 2019</p>
   </div>
 </footer>
 <div class="modal feedback-popup">
@@ -300,7 +304,81 @@
   <textarea name="user-comments" placeholder="Напишите что-нибудь..." aria-label="Поле ввода возникших вопросов" required></textarea>
   <button type="submit" class="button">Отправить</button>
 </form>
-<a class="close-feedback-form" href="#" aria-label="Кнопка закрытия формы обратной связи"></a>
+<a class="close-feedback-popup" href="#" aria-label="Кнопка закрытия формы обратной связи"></a>
 </div>
+<script>
+  var openFeed = document.querySelector(".feedback-open");
+  var feedPop = document.querySelector(".feedback-popup");
+  var closeFeed = document.querySelector(".close-feedback-popup");
+  var firstSlideOp = document.querySelector("#product-1");
+  var firstSlide = document.querySelector("#slide1");
+  var secondSlideOp = document.querySelector("#product-2");
+  var secondSlide = document.querySelector("#slide2");
+  var thirdSlideOp = document.querySelector("#product-3");
+  var thirdSlide = document.querySelector("#slide3");
+  var mainPage = document.querySelector(".index-page");
+
+  openFeed.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    feedPop.classList.add("show-pop");
+  })
+
+  closeFeed.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    feedPop.classList.remove("show-pop");
+  })
+
+  window.addEventListener("keydown", function (evt) {
+    evt.preventDefault();
+    if (evt.keyCode === 27) {
+    if (feedPop.classList.contains("show-pop")) {
+      feedPop.classList.remove("show-pop");
+    }
+  }
+  })
+
+  firstSlideOp.addEventListener("click", function () {
+    if (secondSlide.classList.contains("show-slide") || thirdSlide.classList.contains("show-slide")) {
+      secondSlide.classList.remove("show-slide");
+      thirdSlide.classList.remove("show-slide");
+      mainPage.classList.remove("back-color2");
+      mainPage.classList.remove("back-color3");
+      mainPage.classList.add("back-color1");
+      mainPage.classList.remove("backlight2");
+      mainPage.classList.remove("backlight3");
+      mainPage.classList.add("backlight1");
+    }
+    firstSlide.classList.add("show-slide");
+  })
+
+  secondSlideOp.addEventListener("click", function () {
+    if (firstSlide.classList.contains("show-slide") || thirdSlide.classList.contains("show-slide")) {
+      firstSlide.classList.remove("show-slide");
+      thirdSlide.classList.remove("show-slide");
+      mainPage.classList.remove("back-color1");
+      mainPage.classList.remove("back-color3");
+      mainPage.classList.add("back-color2");
+      mainPage.classList.remove("backlight1");
+      mainPage.classList.remove("backlight3");
+      mainPage.classList.add("backlight2");
+    }
+    secondSlide.classList.add("show-slide");
+  })
+
+  thirdSlideOp.addEventListener("click", function () {
+    if (firstSlide.classList.contains("show-slide") || secondSlide.classList.contains("show-slide")) {
+      firstSlide.classList.remove("show-slide");
+      secondSlide.classList.remove("show-slide");
+      mainPage.classList.remove("back-color1");
+      mainPage.classList.remove("back-color2");
+      mainPage.classList.add("back-color3");
+      mainPage.classList.remove("backlight1");
+      mainPage.classList.remove("backlight2");
+      mainPage.classList.add("backlight3");
+    }
+    thirdSlide.classList.add("show-slide");
+  })
+
+</script>
   </body>
 </html>
