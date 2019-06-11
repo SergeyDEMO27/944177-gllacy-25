@@ -90,9 +90,9 @@
   <input class="visually-hidden" type="radio" id="product-2" name="toggle">
   <input class="visually-hidden" type="radio" id="product-3" name="toggle">
 <div class="slider-controls">
-  <label for="product-1">Первый</label>
-  <label for="product-2">Второй</label>
-  <label for="product-3">Третий</label>
+  <label class="toggle" for="product-1">Первый</label>
+  <label class="toggle" for="product-2">Второй</label>
+  <label class="toggle" for="product-3">Третий</label>
 </div>
   <ul class="main-slider-list">
     <li class="slider-item slide show-slide" id="slide1">
@@ -293,10 +293,10 @@
   </ul>
   <div class="footer-copyright">
     <a href="https://htmlacademy.ru"><img src="img/logo-htmlacademy-small.svg" alt="HTML Academy"></a>
-    <p>Сделано в <span class="underline">HTML Academy</span> © 2019</p>
+    <p>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2019</p>
   </div>
 </footer>
-<div class="modal feedback-popup">
+<div class="feedback-popup">
 <p>Мы обязательно вам ответим!</p>
 <form action="https://echo.htmlacademy.ru" method="post">
   <input type="text" name="user-name" placeholder="Как вас зовут?" aria-label="Поле ввода вашего имени" autocomplete="on">
@@ -310,74 +310,49 @@
   var openFeed = document.querySelector(".feedback-open");
   var feedPop = document.querySelector(".feedback-popup");
   var closeFeed = document.querySelector(".close-feedback-popup");
-  var firstSlideOp = document.querySelector("#product-1");
-  var firstSlide = document.querySelector("#slide1");
-  var secondSlideOp = document.querySelector("#product-2");
-  var secondSlide = document.querySelector("#slide2");
-  var thirdSlideOp = document.querySelector("#product-3");
-  var thirdSlide = document.querySelector("#slide3");
   var mainPage = document.querySelector(".index-page");
+  var toggles = document.querySelectorAll(".toggle");
+  var slides = document.querySelectorAll(".slider-item");
 
   openFeed.addEventListener("click", function (evt) {
     evt.preventDefault();
     feedPop.classList.add("show-pop");
+    mainPage.classList.add("overlay");
   })
 
   closeFeed.addEventListener("click", function (evt) {
     evt.preventDefault();
     feedPop.classList.remove("show-pop");
+    mainPage.classList.remove("overlay");
   })
 
   window.addEventListener("keydown", function (evt) {
-    evt.preventDefault();
     if (evt.keyCode === 27) {
+      evt.preventDefault();
     if (feedPop.classList.contains("show-pop")) {
       feedPop.classList.remove("show-pop");
+      mainPage.classList.remove("overlay");
     }
   }
   })
 
-  firstSlideOp.addEventListener("click", function () {
-    if (secondSlide.classList.contains("show-slide") || thirdSlide.classList.contains("show-slide")) {
-      secondSlide.classList.remove("show-slide");
-      thirdSlide.classList.remove("show-slide");
-      mainPage.classList.remove("back-color2");
-      mainPage.classList.remove("back-color3");
-      mainPage.classList.add("back-color1");
-      mainPage.classList.remove("backlight2");
-      mainPage.classList.remove("backlight3");
-      mainPage.classList.add("backlight1");
-    }
-    firstSlide.classList.add("show-slide");
-  })
-
-  secondSlideOp.addEventListener("click", function () {
-    if (firstSlide.classList.contains("show-slide") || thirdSlide.classList.contains("show-slide")) {
-      firstSlide.classList.remove("show-slide");
-      thirdSlide.classList.remove("show-slide");
-      mainPage.classList.remove("back-color1");
-      mainPage.classList.remove("back-color3");
-      mainPage.classList.add("back-color2");
-      mainPage.classList.remove("backlight1");
-      mainPage.classList.remove("backlight3");
-      mainPage.classList.add("backlight2");
-    }
-    secondSlide.classList.add("show-slide");
-  })
-
-  thirdSlideOp.addEventListener("click", function () {
-    if (firstSlide.classList.contains("show-slide") || secondSlide.classList.contains("show-slide")) {
-      firstSlide.classList.remove("show-slide");
-      secondSlide.classList.remove("show-slide");
-      mainPage.classList.remove("back-color1");
-      mainPage.classList.remove("back-color2");
-      mainPage.classList.add("back-color3");
-      mainPage.classList.remove("backlight1");
-      mainPage.classList.remove("backlight2");
-      mainPage.classList.add("backlight3");
-    }
-    thirdSlide.classList.add("show-slide");
-  })
+  toggles.forEach(function (el, index) {
+    el.addEventListener("click", function () {
+      slides.forEach(function (el, index) {
+        slides[index].className = "slider-item slide";
+            })
+          slides[index].className = "slider-item show-slide";
+          if (slides[index] === slides[0]) {
+            mainPage.className = "index-page back-color1 backlight1 container-main";
+          }
+          else if (slides[index] === slides[1]) {
+            mainPage.className = "index-page  back-color2 backlight2 container-main";
+          }
+          else if (slides[index] === slides[2]) {
+            mainPage.className = "index-page back-color3 backlight3 container-main";
+          }
+          })
+        })
 
 </script>
   </body>
