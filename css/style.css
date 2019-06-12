@@ -92,28 +92,28 @@ body {
 
 .button:hover,
 .button1:hover {
-  /* background-color: rgb(237,90,61, 0.8); */
   background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
   box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .button:active,
 .button1:active {
-  /* background-color: rgb(237,90,61);
-  background-image: -moz-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-  background-image: -webkit-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-  background-image: -ms-linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 1); */
   background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
-
 
 .main-nav-list {
   position: relative;
   padding: 0;
   margin: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 6px;
+  margin-left: 9px;
+  width: 675px;
 }
 
 .nav-item > a:hover,
@@ -936,16 +936,6 @@ input[type="text"]:hover {
   margin-right: auto;
 }
 
-.main-nav-list {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 6px;
-  margin-left: 9px;
-  width: 675px;
-}
-
 .main-nav-list > li:first-child {
   margin-right: 14px;
 }
@@ -968,16 +958,6 @@ input[type="text"]:hover {
 .user-nav div:not(:last-child) {
   margin-right: 10px;
 }
-
-/* .header-contacts {
-  display: flex;
-  flex-direction: column;
-  width: 167px;
-  padding-right: 0;
-  text-align: right;
-  margin-top: 0;
-  margin-left: auto;
-} */
 
 .header-contacts {
   position: absolute;
@@ -1340,6 +1320,8 @@ input[type="text"]:hover {
 }
 
 .main-contacts-info {
+  position: absolute;
+  bottom: 165px;
   display: inline-block;
   width: 275px;
   min-height: 290px;
@@ -1749,12 +1731,6 @@ input[type="text"]:hover {
 background-color: #ffffff;
 }
 
-/* .fat-list input:checked ~ label::before {
-  background-image: url("../img/circle-on.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-} */
-
 .fill-list label {
   position: relative;
 }
@@ -1927,7 +1903,6 @@ background-color: #ffffff;
   background-color: #ffffff;
   border-radius: 50%;
 }
-
 
 .pagination-list::after {
   content: "";
