@@ -2,7 +2,7 @@ var openFeed = document.querySelector(".feedback-open");
 var feedPop = document.querySelector(".feedback-popup");
 var closeFeed = document.querySelector(".close-feedback-popup");
 var mainPage = document.querySelector(".index-page");
-var head = document.querySelector(".backlight1");
+var head = document.querySelector(".backlight-green");
 var toggles = document.querySelectorAll(".toggle");
 var slides = document.querySelectorAll(".slider-item");
 var form = feedPop.querySelector("form");
@@ -50,16 +50,16 @@ toggles.forEach(function (el, index) {
           })
         slides[index].className = "slider-item show-slide";
         if (slides[index] === slides[0]) {
-          mainPage.className = "index-page back-color1";
-          head.className = "container backlight1";
+          mainPage.className = "index-page background-green";
+          head.className = "container backlight-green";
         }
         else if (slides[index] === slides[1]) {
-          mainPage.className = "index-page  back-color2";
-          head.className = "container backlight2";
+          mainPage.className = "index-page background-blue";
+          head.className = "container backlight-blue";
         }
         else if (slides[index] === slides[2]) {
-          mainPage.className = "index-page back-color3";
-          head.className = "container backlight3";
+          mainPage.className = "index-page background-red";
+          head.className = "container backlight-red";
         }
         })
       })

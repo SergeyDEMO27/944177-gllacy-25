@@ -5,7 +5,7 @@
       <title>HTML Academy: Глейси</title>
       <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
       <link href="css/normalize.css" rel="stylesheet">
-      <link href="css/style.css" rel="stylesheet">
+      <link href="css/minimize-style.css" rel="stylesheet">
    </head>
    <body>
       <header class="main-header">
@@ -123,7 +123,7 @@
             <div class="filter-form">
                <form action="https://echo.htmlacademy.ru" method="post">
                   <label>
-                     <span class="filter-name">Сортировка:</span>
+                     <span class="select-name">Сортировка:</span>
                      <select name="sort">
                         <option value="popularity" selected>по популярности</option>
                         <option value="low-price">сначала недорогие</option>
@@ -142,7 +142,7 @@
                      </div>
                   </div>
                   <fieldset class="filter-fat">
-                     <legend><span class="filter-name">Жирность:</span></legend>
+                     <legend><span class="fat-name">Жирность:</span></legend>
                      <ul class="fat-list">
                         <li><input type="radio"  id="fat0"  class="visually-hidden" name="fat" value="0"><label for="fat0">0%</label></li>
                         <li><input type="radio"  id="fat10"  class="visually-hidden" name="fat" value="<10" checked><label for="fat10">до 10%</label></li>
@@ -151,7 +151,7 @@
                      </ul>
                   </fieldset>
                   <fieldset class="filter-fill">
-                     <legend><span class="filter-name1">Наполнители:</span></legend>
+                     <legend><span class="fill-name">Наполнители:</span></legend>
                      <ul class="fill-list">
                         <li><input type="checkbox" id="choc" class="visually-hidden" name="chok-fill" checked><label for="choc">шоколадные</label></li>
                         <li><input type="checkbox" id="sugar" class="visually-hidden" name="sugar-fill" checked><label for="sugar">сахарные присыпки</label></li>
@@ -298,7 +298,7 @@
                      <span class="visually-hidden">Назад</span>
                   </a>
                </li>
-               <li class="page"><a class="current-page1">1</a></li>
+               <li class="page"><a class="active-page">1</a></li>
                <li class="page"><a href="#">2</a></li>
                <li class="page"><a href="#">3</a></li>
                <li class="page"><a href="#">4</a></li>
