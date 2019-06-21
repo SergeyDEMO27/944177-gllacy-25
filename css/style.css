@@ -357,7 +357,7 @@ text-decoration: underline;
 .open-search,
 .open-login,
 .empty-basket {
-  background-color: rgb(255, 255, 255, 0.2);
+  background-color: rgb(255, 255, 255);
 }
 
 .header-contacts,
@@ -475,12 +475,6 @@ text-decoration: underline;
   font-size: 14px;
   line-height: 20px;
   color: #323232;
-  background-color: #fffffe;
-}
-
-.main-contacts iframe {
-  width: 100%;
-  height: 430;
 }
 
 .main-contact {
@@ -1589,6 +1583,33 @@ text-decoration: underline;
   margin-right: auto;
 }
 
+.wrapper::before {
+  content: "";
+  width: 218px;
+  height: 142px;
+  position: absolute;
+  left: 266px;
+  top: -298px;
+  background-image: url("../img/pin.png");
+  z-index: -1;
+}
+
+.wrapper::after {
+  content: "";
+  width: 1200px;
+  height: 430px;
+  position: absolute;
+  top: -437px;
+  left: 0;
+  background-image: url("../img/map.png");
+  z-index: -2;
+}
+
+.main-contacts iframe {
+  width: 100%;
+  height: 430px;
+}
+
 .main-contacts-info {
   position: absolute;
   top: -436px;
@@ -2066,26 +2087,33 @@ background-color: #ffffff;
   top: 0;
   left: -32px;
   content: "";
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   margin-right: 8px;
   vertical-align: top;
-  background-color: transparent;
-  border: 2px solid #eef1ef;
-  border-radius: 20%;
+  background-image: url("../img/checkboxnormal.svg");
+  background-repeat: no-repeat;
 }
 
 .fill-list label:hover::before {
-  border-color: #ffffff;
+  background-image: url("../img/checkboxwhite.svg");
+  background-repeat: no-repeat;
 }
 
-.filter-fill input:checked + label::after {
-  content: "✓";
+.filter-fill input:checked + label:hover::before {
+  background-image: url("../img/checkboxcheckwhite.svg");
+  background-repeat: no-repeat;
+}
+
+.filter-fill input:checked + label::before {
+  content: "";
   position: absolute;
-  top: 1px;
-  left: -28px;
-  width: 12px;
-  height: 12px;
+  top: 0;
+  left: -32px;
+  width: 24px;
+  height: 20px;
+  background-image: url("../img/checkboxchecknormal.svg");
+  background-repeat: no-repeat;
 }
 
 .catalog-item:hover .quick-view {
@@ -2177,7 +2205,7 @@ background-color: #ffffff;
   left: -1px;
   top: 183px;
   font-size: 45px;
-  text-height: 45px;
+  line-height: 45px;
   font-weight: 700;
 }
 
